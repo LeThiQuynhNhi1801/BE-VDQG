@@ -24,6 +24,8 @@ public class League {
 
     private Date endAt;
 
+    private String dieule;
+
     public Integer getIdLeague() {
         return idLeague;
     }

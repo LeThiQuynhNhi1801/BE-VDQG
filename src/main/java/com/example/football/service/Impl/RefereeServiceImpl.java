@@ -18,7 +18,7 @@ public class RefereeServiceImpl implements RefereeService {
     private final RefereeRepository refereeRepository;
     @Override
     public RefereeResponse addReferee(RefereeRequest refereeRequest) {
-        Referees referees = new Referees(null,refereeRequest.getNameReferee(),refereeRequest.getPhone(),refereeRequest.getDOB(),refereeRequest.getAddress(),refereeRequest.getCCCD(),"on");
+        Referees referees = new Referees(null,refereeRequest.getNameReferee(),refereeRequest.getPhone(),refereeRequest.getDOB(),refereeRequest.getAddress(),refereeRequest.getCCCD(),"on",refereeRequest.getExperience());
         refereeRepository.save(referees);
         return MapperUtils.toDTO(referees,RefereeResponse.class);
     }

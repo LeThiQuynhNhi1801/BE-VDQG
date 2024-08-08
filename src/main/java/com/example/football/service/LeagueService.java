@@ -10,7 +10,7 @@ import com.example.football.entity.Team;
 import java.util.List;
 
 public interface LeagueService {
-    LeagueRponse addLeague(LeagueRequest leagueRequest);
+    LeagueRponse addLeague(LeagueRequest leagueRequest,String dieule);
     List<GamesResponse> schedulematch(ScheduleMatchRequest scheduleMatchRequest);
 
     List<GamesResponse> getschedulematch();

@@ -29,4 +29,6 @@ public class Referees {
     private String CCCD;
 
     private String status;
+
+    private Integer experience;
 }

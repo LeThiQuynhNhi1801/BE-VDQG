@@ -14,4 +14,6 @@ public class RefereeRequest {
     private String address;
 
     private String CCCD;
+
+    private Integer experience;
 }

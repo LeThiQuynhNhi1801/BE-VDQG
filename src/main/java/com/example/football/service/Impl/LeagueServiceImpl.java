@@ -25,9 +25,9 @@ public class LeagueServiceImpl implements LeagueService {
     private final RoundRepository roundRepository;
     private final GameRepository gameRepository;
     @Override
-    public LeagueRponse addLeague(LeagueRequest leagueRequest) {
+    public LeagueRponse addLeague(LeagueRequest leagueRequest,String dieule) {
 //        leagueRepository.save(MapperUtils.toEntity(leagueRequest,League.class));
-        League league = new League(null,leagueRequest.getNameLeague(),leagueRequest.getStartAt(),leagueRequest.getEndAt());
+        League league = new League(null,leagueRequest.getNameLeague(),leagueRequest.getStartAt(),leagueRequest.getEndAt(),dieule);
         leagueRepository.save(league);
         for(int i=0;i<leagueRequest.getTeamRequestList().size();i++){
             TeamLeague teamLeague = new TeamLeague(null,teamRepository.getById(leagueRequest.getTeamRequestList().get(i).getIdTeam()),league);
